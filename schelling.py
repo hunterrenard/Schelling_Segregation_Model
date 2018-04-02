@@ -153,7 +153,7 @@ def parameter_sweep():
 	tolerance_levels = np.arange(0, 1.05, .05)
 	average_final_uniformity = np.zeros(len(tolerance_levels))
 
-	for i in range(0n len(tolerance_levels)):
+	for i in range(0, len(tolerance_levels)):
 		print("tolerance: " + str(round(tolerance_levels[i], format_count)))
 
 		count = 0
