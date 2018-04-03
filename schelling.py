@@ -35,13 +35,14 @@ def num_neighbors_of_color(grid, x, y, color, w, h):
         neighbors = neighbors + 1
     if y > 0 and grid[x, y - 1] == color:				# Down
         neighbors = neighbors + 1
-    if x < w - 1 and y < h - 1 and grid[x + 1, y + 1] == color:		# Up-right
+
+    if x < w - 2 and grid[x + 2, y] == color:				# Right
         neighbors = neighbors + 1
-    if x > 0 and y > 0 and grid[x - 1, y - 1] == color:			# Lower-left
+    if x > 1 and grid[x - 2, y] == color:				# Left
         neighbors = neighbors + 1
-    if x < w - 1 and y > 0 and grid[x + 1, y - 1] == color:		# Lower-right
+    if y < h - 2 and grid[x, y + 2] == color:				# Up
         neighbors = neighbors + 1
-    if x > 0 and y < h - 1 and grid[x - 1, y + 1] == color:		# Upper-left
+    if y > 1 and grid[x, y - 2] == color:				# Down
         neighbors = neighbors + 1
 
     return neighbors
